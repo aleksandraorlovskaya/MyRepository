@@ -16,7 +16,7 @@ jobs:
 
         - name: Remote update Prod Repo 
           env:
-            DATABRICKS_HOST: $
-            DATABRICKS_TOKEN: $
+            DATABRICKS_HOST: ${{ secrets.databricks_host }}
+            DATABRICKS_TOKEN: ${{ secrets.databricks_token }}
           run: |
             databricks repos update "/Workspace/Repos/aliaksandra_arlouskaya1@epam.com/myrepository"
